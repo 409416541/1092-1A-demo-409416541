@@ -1,0 +1,133 @@
+#container{
+    display: grid;
+    height: 95vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2.2fr 10fr 0.8fr;
+    grid-template-areas:
+    'head head'
+    'main main'
+    'footer footer';
+    font-size: 1.2rem;
+    font-weight: 520;
+}
+
+.head {
+    grid-area: head;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    'logo header';
+    grid-gap: 0.5rem;
+    text-align: center;
+    background-color: rgb(103, 156, 216);
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+#logo {
+    grid-area: logo;
+    background-color: lightpink;
+}
+
+#header {
+    grid-area: header;
+    background-color: blanchedalmond;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'article aside';
+    grid-gap: 0.5rem;
+    background-color: rgb(11, 54, 17);
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+article {
+    grid-area: article;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.06fr 1fr;
+    grid-template-areas: 
+    'a'
+    'nav';
+    text-align:center;
+    background-color: rgb(218, 134, 221);
+}
+
+nav {
+    margin: 0rem 1rem 1rem 1rem;
+    grid-area: nav;
+    background-color: rgba(22, 146, 218, 0.911);
+}
+
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.06fr 1fr;
+    grid-template-areas: 
+    'a'
+    'section';
+    text-align: center;
+    background-color: rgb(243, 229, 30);
+}
+
+#section {
+    margin: 0rem 1rem 1rem 1rem;
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.05fr 1fr 0.1fr;
+    text-align: left;
+    background-color: aquamarine;
+}
+
+#display {
+    margin: 1rem 5rem -4rem 5rem ;
+    background-color: bisque;
+}
+
+#movie {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'first second third fourth fifth';
+    grid-gap: 0.2rem;
+    margin: 5rem 2.5rem 1.5rem 2.5rem;
+    background-color: blueviolet;
+}
+
+#first {
+    grid-area: first;
+    margin: 2rem 0.5rem 2rem 0.5rem;
+}
+
+#second {
+    grid-area: second;
+    margin: 2rem 0.6rem 2rem 0.5rem;
+}
+
+#third {
+    grid-area: third;
+    margin: 2rem 0.5rem 2rem 0.5rem;
+}
+
+#fourth {
+    grid-area: fourth;
+    margin: 2rem 0.5rem 2rem 0.5rem;
+}
+
+#fifth {
+    grid-area: fifth;
+    margin: 2rem 0.5rem 2rem 0.5rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgba(124, 73, 73, 0.733);
+}
