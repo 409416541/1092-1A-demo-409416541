@@ -22,18 +22,21 @@ body {
   text-align: center;
 }
 
-#heading ul {
-  justify-content: space-between;
+#heading .link {
   display: flex;
-  margin-top: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+  justify-content: space-between;
+}
+
+#heading ul {
+  display: flex;
+  margin-top: 1.7rem;
+  padding: 0 2rem;
 }
 
 #heading li {
   list-style-type: none;
   padding: 0px 5px 10px 5px;
-  font-size: 0.9rem;
+  font-size: 0.9 rem;
 }
 
 #heading ul a {
@@ -43,10 +46,6 @@ body {
 
 #heading ul a:hover {
   background-color: crimson;
-}
-
-#heading ul ul {
-  margin: 0rem;
 }
 
 #main {
@@ -63,7 +62,7 @@ body {
 #main li {
   list-style-type: none;
   text-align: center;
-  margin: 7px;
+  margin: 12px;
   font-size: 0.8rem;
 }
 
@@ -76,17 +75,20 @@ body {
   background-color: crimson;
 }
 
-aside {
+#menu1 {
   width: 20%;
-  height: 100%;
   background-color: darkturquoise;
 }
 
 #section {
-  width: 80%;
-  height: 100%;
+  width: 60%;
   background-color: rgb(152, 230, 230);
   padding: 10px;
+}
+
+#menu2 {
+  width: 20%;
+  background-color: darkturquoise;
 }
 
 #footer {
@@ -108,4 +110,9 @@ aside {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+
+.invisible {
+  display: none;
 }
