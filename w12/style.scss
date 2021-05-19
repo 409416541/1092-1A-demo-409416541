@@ -196,6 +196,7 @@ ul {
     margin: 0 1rem;
     padding: 5rem;
     height: auto;
+    
     .links-inner {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -215,6 +216,8 @@ ul {
         }
     }
 }
+
+/* footer */
 
 footer {
     background-color: rgba(128, 128, 128, 0.151);
