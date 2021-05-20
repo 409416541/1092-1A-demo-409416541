@@ -269,6 +269,15 @@ footer .footer-inner ul {
 }
 
 @media (max-width: 700px) {
+  .main-nav {
+    font-size: 1rem;
+  }
+  .main-nav .logo {
+    width: 7.5rem;
+  }
+  .main-nav ul.main-menu {
+    margin-left: 1rem;
+  }
   .btn {
     font-size: 1rem;
     padding: 0.6rem 0.9rem;
@@ -285,7 +294,7 @@ footer .footer-inner ul {
     display: none;
   }
   .xbox .content h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
   }
   .links {
@@ -296,14 +305,14 @@ footer .footer-inner ul {
         grid-template-columns: repeat(2, 1fr);
   }
   .links .links-inner ul {
-    font-size: 1.2rem;
-    width: 50%;
+    font-size: 1rem;
+    width: 40%;
   }
   .links .links-inner ul h3 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   .links .links-inner ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   footer {
     border-radius: 20px;
@@ -315,6 +324,28 @@ footer .footer-inner ul {
 }
 
 @media (max-width: 500px) {
+  .main-nav {
+    height: auto;
+    font-size: 0.6rem;
+  }
+  .main-nav .logo {
+    width: 5rem;
+  }
+  .main-nav ul.main-menu {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 0.8rem;
+  }
+  .main-nav ul li {
+    padding: 0 0.2rem;
+  }
+  .main-nav ul li a {
+    padding-bottom: 2px;
+  }
+  .main-nav ul li a:hover {
+    border-bottom: 2px solid #262626;
+  }
   .btn {
     font-size: 0.9rem;
     padding: 0.5rem 0.7rem;
@@ -328,7 +359,7 @@ footer .footer-inner ul {
     padding: 2rem 0 0 2rem;
   }
   .xbox .content h2 {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     margin-bottom: 1rem;
   }
   .links {
@@ -339,14 +370,7 @@ footer .footer-inner ul {
         grid-template-columns: 1fr;
   }
   .links .links-inner ul {
-    font-size: 1.2rem;
-    width: 50%;
-  }
-  .links .links-inner ul h3 {
-    margin-bottom: 2rem;
-  }
-  .links .links-inner ul li {
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
   }
   footer {
     padding: 0;
