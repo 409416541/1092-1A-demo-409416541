@@ -105,10 +105,8 @@ section.articles{
   article{
     background-color: rgb(238, 209, 209);
     @include customShadow(0.3rem);
-
     img{
       width: 100%;
-      
     }
 
     .info {
