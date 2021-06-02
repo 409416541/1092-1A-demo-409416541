@@ -13,8 +13,13 @@ html {
 
 body {
   font-family: 'Ibarra Real Nova', serif;
-  background-color: #f9f2f2;
+  background-color: #e6ecdd;
   font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
 }
 
 @mixin customShadow($size){
@@ -45,6 +50,13 @@ header {
     div {
       padding: 0.5rem 0.8rem;
       @include customShadow(0.3rem);
+
+      h2 {
+        font-size: 4rem;
+          border-radius: 10px;
+          color: blue;
+          background-color: aquamarine;
+      }
     }
   }
 }
@@ -58,6 +70,18 @@ nav {
 
     li {
       padding: 1.8rem 1rem;
+
+      a {
+        font-size: 2rem;
+        padding: 2px;
+      }
+
+      a:hover {
+        border-radius: 5px;
+        border-bottom: 4px solid #262626;
+        background-color: rgba(218, 64, 172, 0.904);
+        @include customShadow(0.3rem);
+      }
     }
   }
 }
@@ -71,7 +95,7 @@ nav {
 //Section
 section.articles{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
   gap: 3rem;
   min-width: 30rem;
 
@@ -79,10 +103,32 @@ section.articles{
 
 
   article{
-    @include customShdsow(0.3rem);
+    background-color: rgb(238, 209, 209);
+    @include customShadow(0.3rem);
+
     img{
       width: 100%;
-      height: auto;
+      
+    }
+
+    .info {
+      p {
+          margin: 1rem 0;
+      }
+
+      a {
+          font-size: 1.5rem;
+          padding: 2px 2px 0 2px;
+          border-radius: 2px;
+          background-color: bisque;
+      }
+    
+      a:hover {
+        border-radius: 5px;
+        border-bottom: 2px solid #262626;
+        background-color: rgba(235, 134, 205, 0.904);
+        @include customShadow(0.3rem);
+      }
     }
   }
 }
