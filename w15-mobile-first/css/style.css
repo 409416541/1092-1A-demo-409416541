@@ -22,6 +22,14 @@ a {
   color: #262626;
 }
 
+.menu-btn {
+  display: block;
+}
+
+.menu-btn:hover {
+  opacity: 0.5;
+}
+
 header {
   display: -ms-grid;
   display: grid;
@@ -46,9 +54,9 @@ header .logo {
 
 header .logo div {
   padding: 0.5rem 0.8rem;
-  border: 0.2px solid rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
-          box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
+  border: 10px solid rgba(231, 119, 119, 0.6);
+  -webkit-box-shadow: -0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.2);
+          box-shadow: -0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.2);
 }
 
 header .logo div h2 {
@@ -58,7 +66,31 @@ header .logo div h2 {
   background-color: aquamarine;
 }
 
-nav ul {
+header nav.main-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3rem;
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1400;
+  background-color: rgba(161, 95, 134, 0.75);
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 14%;
+}
+
+header nav.main-menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,22 +103,53 @@ nav ul {
   list-style: none;
 }
 
-nav ul li {
+header nav.main-menu ul li {
   padding: 1.8rem 1rem;
 }
 
-nav ul li a {
+header nav.main-menu ul li ul {
+  border: #ccc 1px solid;
+  position: absolute;
+  z-index: 99;
+  left: 25%;
+  top: 100%;
+  min-width: 50%;
+  background-color: rgba(161, 95, 134, 0.75);
+  display: none;
+}
+
+header nav.main-menu ul li ul li {
+  border-bottom: #ccc 1px solid;
+  padding: 0.5rem;
+}
+
+header nav.main-menu ul li ul li:last-child {
+  border-bottom: none;
+}
+
+header nav.main-menu ul li ul a {
+  font-size: 1rem;
+}
+
+header nav.main-menu ul li a {
   font-size: 2rem;
   padding: 2px;
 }
 
-nav ul li a:hover {
+header nav.main-menu ul li a:hover {
   border-radius: 5px;
   border-bottom: 4px solid #262626;
   background-color: rgba(218, 64, 172, 0.904);
   border: 0.2px solid rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
           box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
+}
+
+header nav.main-menu ul li:hover > ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
 }
 
 .search {
@@ -114,9 +177,9 @@ section.articles {
 
 section.articles article {
   background-color: #eed1d1;
-  border: 0.2px solid rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
-          box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
+  border: 10px solid rgba(231, 119, 119, 0.6);
+  -webkit-box-shadow: -0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.2);
+          box-shadow: -0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.2);
 }
 
 section.articles article img {

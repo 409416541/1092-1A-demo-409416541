@@ -23,13 +23,22 @@ a {
 }
 
 @mixin customShadow($size){
-  border: 0.2px solid rgba(0, 0, 0, 0.6);
+  border: 10px solid rgba(231, 119, 119, 0.6);
   box-shadow: -$size $size 0 0 rgba(0, 0, 0, 0.2);
 }
 
 @mixin setDisplayWidth($width, $margin) {
   width: $width;
   margin: $margin auto;
+}
+
+
+.menu-btn{
+  display: block;
+}
+
+.menu-btn:hover{
+  opacity: 0.5;
 }
 
 //Header
@@ -49,7 +58,7 @@ header {
     
     div {
       padding: 0.5rem 0.8rem;
-      @include customShadow(0.3rem);
+      @include customShadow(0.5rem);
 
       h2 {
         font-size: 4rem;
@@ -59,28 +68,73 @@ header {
       }
     }
   }
-}
 
-nav {
-  ul {
+  nav.main-menu {
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    list-style: none;
+    height: 3rem;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1400;
+    background-color: rgba(161, 95, 134, 0.75);
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    padding: 0 14%;
 
-    li {
-      padding: 1.8rem 1rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+  
+      li {
+        padding: 1.8rem 1rem;
+  
+        ul {
+          border: #ccc 1px solid;
+          position: absolute;
+          z-index: 99;
+          left: 25%;
+          top: 100%;
+          min-width: 50%;
+          background-color: rgba(161, 95, 134, 0.75);
+          display: none;
+        
+          li {
+            border-bottom: #ccc 1px solid;
+            padding: 0.5rem;
+          }
+    
+          li:last-child {
+              border-bottom: none;
+          }
 
-      a {
-        font-size: 2rem;
-        padding: 2px;
+          a {
+            font-size: 1rem;
+          }
+        }
+
+        a {
+          font-size: 2rem;
+          padding: 2px;
+        }
+    
+      a:hover {
+            border-radius: 5px;
+            border-bottom: 4px solid #262626;
+            background-color: rgba(218, 64, 172, 0.904);
+            border: 0.2px solid rgba(0, 0, 0, 0.6);
+            box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
+        }
       }
 
-      a:hover {
-        border-radius: 5px;
-        border-bottom: 4px solid #262626;
-        background-color: rgba(218, 64, 172, 0.904);
-        @include customShadow(0.3rem);
+      li:hover > ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
       }
     }
   }
@@ -104,7 +158,8 @@ section.articles{
 
   article{
     background-color: rgb(238, 209, 209);
-    @include customShadow(0.3rem);
+    @include customShadow(0.5rem);
+
     img{
       width: 100%;
     }
@@ -115,17 +170,18 @@ section.articles{
       }
 
       a {
-          font-size: 1.5rem;
-          padding: 2px 2px 0 2px;
-          border-radius: 2px;
-          background-color: bisque;
+        font-size: 1.5rem;
+        padding: 2px 2px 0 2px;
+        border-radius: 2px;
+        background-color: bisque;
       }
     
       a:hover {
         border-radius: 5px;
         border-bottom: 2px solid #262626;
         background-color: rgba(235, 134, 205, 0.904);
-        @include customShadow(0.3rem);
+        border: 0.2px solid rgba(0, 0, 0, 0.6);
+        box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
       }
     }
   }
